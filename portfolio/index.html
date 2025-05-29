@@ -14,14 +14,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!-- google fonts -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Joti+One&display=swap"
-      rel="stylesheet"
-    /> -->
-
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -36,15 +28,19 @@
       <header>
         <div class="container">
           <!-- <div class="logo"><img src="./assets/logo.png" alt=""></div> -->
-           <div class="logo">LOGO Here</div>
+          <div class="logo">LOGO Here</div>
 
           <input type="checkbox" id="hamburgerMenu" />
           <div class="menu">
-            <div><a href="#home">HOME</a></div>
+            <div>
+              <a href="#home">
+                <i class="fa-solid fa-house-chimney-crack"></i> HOME</a
+              >
+            </div>
 
             <div><a href="#skills">SKILLS</a></div>
 
-            <div> <a href="#projects">PROJECTS</a></div>
+            <div><a href="#projects">PROJECTS</a></div>
 
             <div><a href="#about">ABOUT</a></div>
 
@@ -62,21 +58,24 @@
           <div class="left flex">
             <div>Hi I'm <span>Manish</span></div>
             <div class="tag">Soft. Engineer</div>
+
             <div>
-                <button>
-                  Download CV <i class="fa-solid fa-download"></i>
-                </button>
-              </a>
+              <!-- <a href="./text.txt" download> -->
+              <button>Download CV <i class="fa-solid fa-download"></i></button>
             </div>
           </div>
           <div class="right flex">
-            <img src="./assets/manish.jpg" alt="prem speaking" />
+            <img
+              src="./assets/manish.jpg"
+              alt="prem speaking"
+              style="object-fit: cover; height: 300px"
+            />
           </div>
         </div>
       </section>
       <!-- details section -->
-      <section>
-        <div class="details">
+      <section style="width: 80%">
+        <div class="details" style="width: 100%">
           <div class="detail_bar">
             <div class="graduate">
               <i class="fa-solid fa-graduation-cap"></i>
@@ -84,20 +83,24 @@
               <!-- <div class="status">Grad</div> -->
               <span>Graduate</span>
             </div>
-            <div class="project">
+            <div
+              class="graduate"
+              style="border-left: 5px solid grey; border-right: 5px solid grey"
+            >
               <i class="fa-solid fa-list-check"></i>
               <span>2+ Project</span>
               <span>Completed</span>
             </div>
-            <div class="experience">
+            <div class="graduate">
               <i class="fa-solid fa-business-time"></i>
               <span>1 Year</span>
-              <span>Experience</span></div>
+              <span>Experience</span>
+            </div>
           </div>
         </div>
       </section>
       <!-- skills section -->
-       <section class="skills" id="skills">
+      <section class="skills" id="skills">
         <div class="skill_header">Skills</div>
         <div class="skill_bar">
           <div class="firstskill">
@@ -121,81 +124,132 @@
             <span>Figma</span>
           </div>
         </div>
-       </section>
+      </section>
       <!-- project section -->
       <section class="project-section container" id="projects">
         <h2>My Projects</h2>
         <div class="grid project-grid">
-          <div class="project-card"> project will be here
-          </div>
+          <div class="project-card">project will be here</div>
           <div class="project-card">PROJECT</div>
           <div class="project-card">PROJECT</div>
           <div class="project-card">PROJECT</div>
         </div>
       </section>
-       <section class="aboutme" id="about">
+      <section class="aboutme" id="about">
         <div class="grid_about">
           <div class="left_flex">
-            <img src="./assets/manish.jpg" alt="">
+            <img src="./assets/manish.jpg" alt="" />
           </div>
           <div class="right_flex">
             <div class="aboutheader">About Me</div>
             <div class="aboutdetails">
-              <span><b>Manish Lama</b></span> <br>
-              <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, debitis, dolores vero alias consectetur culpa dolorum maiores ipsum earum officiis, commodi iusto? Nulla illum asperiores accusamus quisquam voluptatum, officia cumque.</span> <br>
+              <span><b>Manish Lama</b></span> <br />
+              <span
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio,
+                debitis, dolores vero alias consectetur culpa dolorum maiores
+                ipsum earum officiis, commodi iusto? Nulla illum asperiores
+                accusamus quisquam voluptatum, officia cumque.</span
+              >
+              <br />
               <span><b>Sydney,Australia</b></span>
               <span>
-                <div class="interest"><b>Interest</b></div> 
+                <div class="interest"><b>Interest</b></div>
                 <div class="interestsports">
                   <span>Basketball</span>
-                 <span>Console Games</span>
-                 <span>Swimming</span>
+                  <span>Console Games</span>
+                  <span>Swimming</span>
                 </div>
               </span>
             </div>
           </div>
         </div>
-       </section>
-       <!-- contact section -->
-        <section class="contact" id="contact">
-          <div class="contactme">
-            <div class="contacthere">Contact Me</div>
-            <div class="contactlogo">
-              <span><a href="https://www.linkedin.com/in/manishlama99/"><i class="fa-brands fa-linkedin"></i></a></span>
-              <span><a href="https://github.com/manishhh08"><i class="fa-brands fa-github"></i></a></span>
-              <span><a href="#home"><i class="fa-brands fa-youtube"></i></a></span>
-              <span><a href="#home"><i class="fa-solid fa-mobile"></i></a></span>
-            </div>
-            <div><h3>OR</h3></div>
-            <div class="contactinput">
-              <div class="inputarea">
-                <input type="text" placeholder="abcd@gmail.com" required>
-                <button><i class="fa-solid fa-paper-plane"></i></button>
-                <label for="input" ></label>
-              </div>
+      </section>
+      <!-- contact section -->
+      <section class="contact" id="contact">
+        <div class="contactme">
+          <div class="contacthere">Contact Me</div>
+          <div class="contactlogo">
+            <span
+              ><a href="https://www.linkedin.com/in/manishlama99/"
+                ><i class="fa-brands fa-linkedin"></i></a
+            ></span>
+            <span
+              ><a href="https://github.com/manishhh08"
+                ><i class="fa-brands fa-github"></i></a
+            ></span>
+            <span
+              ><a href="#home"><i class="fa-brands fa-youtube"></i></a
+            ></span>
+            <span
+              ><a href="#home"><i class="fa-solid fa-mobile"></i></a
+            ></span>
+          </div>
+          <div>
+            <h3>OR</h3>
+          </div>
+          <div class="contactinput">
+            <div class="inputarea" style="position: relative">
+              <input
+                type="text"
+                placeholder="abcd@gmail.com"
+                required=""
+                style="
+                  color: white;
+                  background: transparent;
+                  border: 0px;
+                  height: 40px;
+                  background: black;
+                  border-radius: 40px;
+                  padding-left: 10px;
+                "
+              />
+              <button
+                style="
+                  background: transparent;
+                  border: 0px;
+                  position: absolute;
+                  right: 5px;
+                  /* background: orange; */
+                  color: orange;
+                  top: 7px;
+                  font-size: 1.5rem;
+                "
+              >
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <label for="input"></label>
             </div>
           </div>
-        </section>
-        <footer>
-          <div class="alllinks">
-            <div class="links"> <b>Links</b> <br>
-              <span><a href="#home">Home</a></span>
-              <span><a href="#skills">Skills</a></span>
-              <span><a href="#projects">Project</a></span>
-              <span><a href="#contact">Contact</a></span>
-            </div>
-            <div class="sociallinks">
-              <b>Social Links</b> <br>
-              <span><a href="https://www.linkedin.com/in/manishlama99/">LinkedIn</a></span>
-              <span><a href="https://github.com/manishhh08">Github</a></span>
-              <span><a href="#about">Facebook</a></span>
-              <span><a href="#contact">Youtube</a></span> 
-            </div>
+        </div>
+      </section>
+      <!-- footer section -->
+      <footer>
+        <div class="alllinks">
+          <div class="links">
+            <b>Links</b> <br />
+            <span><a href="#home">Home</a></span>
+            <span><a href="#skills">Skills</a></span>
+            <span><a href="#projects">Project</a></span>
+            <span><a href="#contact">Contact</a></span>
           </div>
-          <span>&copy<b>Manish Official Website</b> </span>
-          <span>All copyright reserved by Manish!!</span>
-        </footer>
-            <!-- gotohome button -->
+          <div class="sociallinks">
+            <b>Social Links</b> <br />
+            <span
+              ><a
+                href="https://www.linkedin.com/in/manishlama99/"
+                target="_blank"
+                >LinkedIn</a
+              ></span
+            >
+            <span><a href="https://github.com/manishhh08">Github</a></span>
+            <span><a href="#about">Facebook</a></span>
+            <span><a href="#contact">Youtube</a></span>
+          </div>
+        </div>
+        <span>©<b>Manish Official Website</b> </span>
+        <span>All copyright reserved by Manish!!</span>
+      </footer>
+      <!-- gotohome button -->
       <!-- <div class="gotohome">
         <a href="#home"><i class="fa-solid fa-up-long"></i></a>
       </div> -->

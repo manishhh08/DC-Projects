@@ -1,6 +1,7 @@
 :root {
   scroll-behavior: smooth;
   --color-orange: orangered;
+  --color-green: #4bdb48;
   --color-dark: #2a2a2a;
 
   --body-bg: rgb(212, 242, 252);
@@ -13,63 +14,35 @@
   --dark-text-color: white;
   --dark-border-color: white;
 
+  --color-hero: var(--color-orange);
+
   --shadow: 4px -2px 40px 9px rgba(128, 128, 128, 0.464);
+  --header-shadow: 5px 4px 11px 1px #8a8a8a7d;
 }
-/* mobile screen */
-@media screen and (width<662px) {
-  label[for="hamburgerMenu"] {
-    display: block;
-  }
-  .menu {
-    visibility: hidden;
-    width: 0px;
-    transition: width 0.2s ease-in;
-    position: fixed;
-    height: 100vh;
-    top: 50px;
-    right: 0px;
-    flex-direction: column;
-    background-color: var(--header-bg);
-    z-index: 999;
-    padding: 10px;
-    gap: 15px;
-  }
-  #hamburgerMenu ~ label {
-    transition: all 0.2s ease-in;
-  }
 
-  #hamburgerMenu:checked + .menu {
-    visibility: visible;
-    width: 200px;
-  }
-
-  #hamburgerMenu:checked ~ label {
-    transform: rotate(90deg);
-  }
-  /* .gotohome {
-    height: 100px;
-    position: right;
-    background-color: orangered;
-  } */
-  .hero {
-    grid-template-areas:
-      "right"
-      "left";
-  }
-
-  .project-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.menu a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: #2a2a2a;
 }
+
 .wrapper {
   background: var(--body-bg);
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
 }
 
 #darkmode:checked + .wrapper {
   --body-bg: var(--dark-bg);
   color: var(--dark-text-color);
   --header-bg: var(--dark-header-bg);
+
+  --color-hero: var(--color-green);
 }
 
 #darkmode {
@@ -103,10 +76,11 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--header-bg);
-
   height: 50px;
   position: sticky;
   top: 0px;
+  box-shadow: var(--header-shadow);
+  width: 100%;
 }
 
 header .container {
@@ -121,9 +95,9 @@ header .container .menu {
 }
 /* hero section */
 .hero-section {
-  margin-top: 1%;
-  max-height: 60vh;
-  padding-top: 10rem;
+  margin-top: 20px;
+  height: 300px;
+  /* padding-top: 60px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -145,11 +119,12 @@ header .container .menu {
 }
 
 .hero {
-  background: var(--color-orange);
+  background: var(--color-hero);
   grid-template-areas: "left right";
   padding: 2rem;
   box-shadow: var(--shadow);
   width: 80%;
+  grid-template-columns: 1fr 2fr;
 }
 
 .left {
@@ -180,10 +155,11 @@ header .container .menu {
 
 .right {
   grid-area: right;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: left;
-  margin-top: -2rem;
-  margin-bottom: 2rem;
+  /* margin-top: -2rem; */
+  height: 100%;
+  /* margin-bottom: 2rem; */
 }
 
 label[for="hamburgerMenu"] {
@@ -209,6 +185,7 @@ label[for="hamburgerMenu"] {
   flex-direction: column;
   justify-content: center;
   padding: 30px;
+  width: 80%;
 }
 
 .project-grid {
@@ -217,14 +194,14 @@ label[for="hamburgerMenu"] {
 /* personal details section */
 .details {
   justify-content: center;
-  margin-left: 9rem;
-  margin-top: 10rem;
+  /* margin-left: 9rem; */
+  /* margin-top: 10rem; */
 }
 .detail_bar {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  width: 80%;
+  justify-content: space-between;
+  /* width: 80%; */
   border: black;
   border-radius: 25px;
   font-size: 20px;
@@ -245,17 +222,20 @@ label[for="hamburgerMenu"] {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  /* border-left: 5px solid grey; */
 }
 /* skills section */
 .skills {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   height: 200px;
   width: 80%;
-  margin-left: 8rem;
+  /* margin-left: 8rem; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
 }
 .skills .skill_header {
   display: flex;
@@ -272,7 +252,7 @@ label[for="hamburgerMenu"] {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 5rem;
+  /* margin-top: 5rem; */
   width: 100%;
   font-size: 20px;
 }
@@ -350,6 +330,7 @@ label[for="hamburgerMenu"] {
 /* contact section */
 .contact {
   margin-top: 5rem;
+  width: 80%;
 }
 .contact .contactme {
   height: 50vh;
@@ -373,12 +354,13 @@ label[for="hamburgerMenu"] {
   font-size: 2em;
 }
 .contactme .contactinput {
-  background-color: red;
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  height: 70px;
+  border-radius: 50px;
+  height: 50px;
+  padding: 15px;
 }
 /* footer section */
 footer {
@@ -408,7 +390,54 @@ footer .alllinks {
   display: flex;
   flex-direction: column;
 }
-/* media query here */
+
+/* mobile screen */
+@media screen and (width<662px) {
+  label[for="hamburgerMenu"] {
+    display: block;
+  }
+  .menu {
+    visibility: hidden;
+    width: 0px;
+    transition: width 0.2s ease-in;
+    position: fixed;
+    height: 100vh;
+    top: 50px;
+    right: 0px;
+    flex-direction: column;
+    background-color: var(--header-bg);
+    z-index: 999;
+    padding: 10px;
+    gap: 15px;
+  }
+
+  #hamburgerMenu ~ label {
+    transition: all 0.2s ease-in;
+  }
+
+  #hamburgerMenu:checked + .menu {
+    visibility: visible;
+    width: 200px;
+  }
+
+  #hamburgerMenu:checked ~ label {
+    transform: rotate(90deg);
+  }
+  /* .gotohome {
+    height: 100px;
+    position: right;
+    background-color: orangered;
+  } */
+  .hero {
+    grid-template-areas:
+      "right"
+      "left";
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 
 /* tablet screen */
 @media screen and (width >= 662px) and (width<992px) {
@@ -417,7 +446,7 @@ footer .alllinks {
   }
 }
 /* large screen  */
-@media screen and (width >1200px) {
+@media screen and (width >=1400px) {
   .project-grid {
     grid-template-columns: repeat(4, 1fr);
   }
